@@ -71,7 +71,7 @@
 <link href="/css/main.css?v=5.1.0" rel="stylesheet" type="text/css" />
 
 
-  <meta name="keywords" content="Hexo, NexT" />
+  <meta name="keywords" content="Handlebars," />
 
 
 
@@ -80,20 +80,25 @@
 
 
 
-  <link rel="shortcut icon" type="image/x-icon" href="/05679B2F9554D981E5476847E8541D73.jpg" />
+  <link rel="shortcut icon" type="image/x-icon" href="/Avatar.png?v=5.1.0" />
 
 
 
 
 
 
-<meta property="og:type" content="website">
-<meta property="og:title" content="BryanAdamss的博客">
-<meta property="og:url" content="http://yoursite.com/index.html">
+<meta name="description" content="#HandleBars备忘 表达式{{xxx}}  {{{xxxx}}}因为双大括号默认会进行HTML转义,将&amp;lt;转换为&amp;amp;lt;,通过三括号可以避免 Helper默认Helper{{#if a}}如果a为真执行这个{{/if}}  {{#else}}否则执行这个{{/else}}  {{#unless a}}当a为假的时候执行这个{{/unless}}  {{#each obj}}遍历">
+<meta name="keywords" content="Handlebars">
+<meta property="og:type" content="article">
+<meta property="og:title" content="Handlebars-guide">
+<meta property="og:url" content="http://yoursite.com/2017/03/17/Handlebars-guide/index.html">
 <meta property="og:site_name" content="BryanAdamss的博客">
+<meta property="og:description" content="#HandleBars备忘 表达式{{xxx}}  {{{xxxx}}}因为双大括号默认会进行HTML转义,将&amp;lt;转换为&amp;amp;lt;,通过三括号可以避免 Helper默认Helper{{#if a}}如果a为真执行这个{{/if}}  {{#else}}否则执行这个{{/else}}  {{#unless a}}当a为假的时候执行这个{{/unless}}  {{#each obj}}遍历">
 <meta property="og:locale" content="zh-Hans">
+<meta property="og:updated_time" content="2017-03-17T11:34:06.473Z">
 <meta name="twitter:card" content="summary">
-<meta name="twitter:title" content="BryanAdamss的博客">
+<meta name="twitter:title" content="Handlebars-guide">
+<meta name="twitter:description" content="#HandleBars备忘 表达式{{xxx}}  {{{xxxx}}}因为双大括号默认会进行HTML转义,将&amp;lt;转换为&amp;amp;lt;,通过三括号可以避免 Helper默认Helper{{#if a}}如果a为真执行这个{{/if}}  {{#else}}否则执行这个{{/else}}  {{#unless a}}当a为假的时候执行这个{{/unless}}  {{#each obj}}遍历">
 
 
 
@@ -121,13 +126,13 @@
 
 
 
-  <link rel="canonical" href="http://yoursite.com/"/>
+  <link rel="canonical" href="http://yoursite.com/2017/03/17/Handlebars-guide/"/>
 
 
 
 
 
-  <title> 吴晨捷的个人博客 </title>
+  <title> Handlebars-guide | BryanAdamss的博客 </title>
 </head>
 
 <body itemscope itemtype="http://schema.org/WebPage" lang="zh-Hans">
@@ -152,9 +157,7 @@
     
   
 
-  <div class="container one-collumn sidebar-position-left 
-   page-home 
- ">
+  <div class="container one-collumn sidebar-position-left page-post-detail ">
     <div class="headband"></div>
 
     <header id="header" class="header" itemscope itemtype="http://schema.org/WPHeader">
@@ -165,7 +168,7 @@
     <div class="custom-logo-site-title">
       <a href="/"  class="brand" rel="start">
         <span class="logo-line-before"><i></i></span>
-        <span class="site-title">吴晨捷的博客</span>
+        <span class="site-title">BryanAdamss的博客</span>
         <span class="logo-line-after"><i></i></span>
       </a>
     </div>
@@ -200,7 +203,7 @@
         </li>
       
         
-        <!-- <li class="menu-item menu-item-categories">
+        <li class="menu-item menu-item-categories">
           <a href="/categories" rel="section">
             
               <i class="menu-item-icon fa fa-fw fa-th"></i> <br />
@@ -241,9 +244,9 @@
             搜索
           </a>
         </li>
-      -->
+      
     </ul>
-   
+  
 
   
     <div class="site-search">
@@ -279,18 +282,18 @@
         <div class="content-wrap">
           <div id="content" class="content">
             
-  <section id="posts" class="posts-expand">
+
+  <div id="posts" class="posts-expand">
     
-      
 
   
 
   
   
   
-<!-- 
+
   <article class="post post-type-normal " itemscope itemtype="http://schema.org/Article">
-    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2020/12/06/vue-router-analysis-part3/">
+    <link itemprop="mainEntityOfPage" href="http://yoursite.com/2017/03/17/Handlebars-guide/">
 
     <span hidden itemprop="author" itemscope itemtype="http://schema.org/Person">
       <meta itemprop="name" content="BryanAdamss">
@@ -311,10 +314,7 @@
             
             
               
-                
-                <a class="post-title-link" href="/2020/12/06/vue-router-analysis-part3/" itemprop="url">
-                  vue-router-analysis-part3
-                </a>
+                Handlebars-guide
               
             
           </h1>
@@ -329,8 +329,8 @@
               
                 <span class="post-meta-item-text">发表于</span>
               
-              <time title="创建于" itemprop="dateCreated datePublished" datetime="2020-12-06T12:13:35+08:00">
-                2020-12-06 12:13:35
+              <time title="创建于" itemprop="dateCreated datePublished" datetime="2017-03-17T18:48:09+08:00">
+                2017-03-17 18:48:09
               </time>
             
 
@@ -387,120 +387,116 @@
       
 
       
-        
-          
-          vue-router 源码解析 | 6k 字 | 多图预警 - 【下】
-各位好，我是光辉 😎
-本篇是vue-router源码解析的下篇，即收尾篇
-本篇主要介绍了下面几点
-介绍了vue-router是如何处理滚动的
-view、link组件都怎么实现的？
-路由变化又是怎么触发重新渲染的等等
+        <p>#HandleBars备忘</p>
+<h2 id="表达式"><a href="#表达式" class="headerlink" title="表达式"></a>表达式</h2><pre><code>{{xxx}}
 
+{{{xxxx}}}因为双大括号默认会进行HTML转义,将&lt;转换为&amp;lt;,通过三括号可以避免
+</code></pre><h2 id="Helper"><a href="#Helper" class="headerlink" title="Helper"></a>Helper</h2><h3 id="默认Helper"><a href="#默认Helper" class="headerlink" title="默认Helper"></a>默认Helper</h3><pre><code>{{#if a}}如果a为真执行这个{{/if}}
 
-另外还是要说一下
-第一次做源码解析，肯定有很多错误或理解不到位的地方，欢迎指正 🤞
+{{#else}}否则执行这个{{/else}}
 
+{{#unless a}}当a为假的时候执行这个{{/unless}}
 
-项目地址
-https://github.com/BryanAdamss/vue-router-for-analysis
-如果觉得对你有帮助，记得给我一个star✨
+{{#each obj}}遍历obj的每个属性{{/each}}
+    #each内可以用{{@index}}获取当前遍历的索引值，用{{@key}}获取当前属性的属性名，用{{this}}可以获当前属性的值
+    如何获取父对象
+        可以通过{{../父对象某属性}}来获取父对象的某个属性，{{@../index}}获取父对象当前的所引值
 
+{{#with obj}}xxx{{/with}}类似js中with，可改变作作用域，在each中也可通过#with 父对象名 来访问父对象
 
-uml 图源文件
-https://github.
-  -->
+{{lookup xxx}}一般用来按照索引来找兄弟变量对应的值{{lookup ../父对象某属性 @index}}，查找父对象在当前索引下值
+</code></pre><h3 id="自定义Helper"><a href="#自定义Helper" class="headerlink" title="自定义Helper"></a>自定义Helper</h3><h4 id="行级Helper"><a href="#行级Helper" class="headerlink" title="行级Helper"></a>行级Helper</h4><pre><code>语法{{helperName [普通值参数][hash值参数]}}
 
+{{customHelper "My Text" class="my-class" visible=true counter=4}}
 
-    
+Handlebars.registerHelper(&apos;customHelper&apos;, function() {
+        console.log(arguments[0]);//==&gt;&quot;My Text&quot;
+        console.log(arguments[1].hash);//==&gt;{class:&quot;my-class&quot;,visible:true,conter:4}
+});    
+</code></pre><h4 id="块级Helper"><a href="#块级Helper" class="headerlink" title="块级Helper"></a>块级Helper</h4><pre><code>语法{{#helperName context [普通值参数][hash值参数]}}xxxxxxxxx{{/helperName}}
+
+{{#customHelper nav "normalValue" class="my-class" visible=true counter=4}}
+    {{if name}}
+        aaaaaa
+    {{else}}
+        bbbbbbb
+    {{/if}}
+{{/customHelper}}
+
+Handlebars.registerHelper(&apos;customHelper&apos;, function(context,options) {
+    console.log(arguments[0]);//==&gt;context
+    console.log(arguments[1]);//==&gt;normalValue
+    console.log(arguments[2]);//==&gt;options
+    //说明在registerHelper内部,第二个参数匿名函数,只会存在3个实参，第一个为当前使用的上下文，第二个如果有则为一个普通值参数，另外一个就是封装了函数相关信息的options对象，它有hash(封装好一个或多个键值对参数)、fn(传入一个上下文，并在此上下文中执行customHelper模板中的{{#if}}到{{else}}中的模板)、inverse(同fn相反执行{{else}}到{{/if}}之间的)、name、data等属性。
+});
+</code></pre><blockquote>
+<p>参考:<a href="http://cnodejs.org/topic/56a2e8b1cd415452622eed2d" target="_blank" rel="noopener">http://cnodejs.org/topic/56a2e8b1cd415452622eed2d</a><br><a href="http://www.cnblogs.com/iyangyuan/archive/2013/12/12/3471227.html" target="_blank" rel="noopener">http://www.cnblogs.com/iyangyuan/archive/2013/12/12/3471227.html</a></p>
+</blockquote>
+
       
+    </div>
 
-  <div class="site-title">
     <div>
-      <span  style="font-size:30px !important;font-weight: 800;">个人信息</span>
-    </div>
-    <div style="font-size:20px;">
-    <ul style="list-style:initial">
-      <li>学号:032002332</li>
-      <li>班级:2020级计算机3班</li>
-      <li>性格:为人儒雅随和</li>
-      <li>家乡:福州</li>
-      <li style="color:#ccc">网页右下角可以点的哦</li>
-    </ul></div>
-    <div style="font-size:20px;"></div>
-    <div style="font-size:30px;" >
-      <span style="font-weight: 800;">自我介绍</span>
-    </div>
-    <div style="font-size:20px;">
-      <ul style="list-style:initial">
-      <li>很荣幸这学期可以来到张栋老师的软工课程并接受老师和助教的教导，我名字
-      叫吴晨捷，来自2020级计算机3班，目前也担任着班长的职务。</li>
-     </ul></div>
-    <div style="font-size:30px;" >
-      <span style="font-weight: 800;">兴趣爱好</span>
-    </div>
-    <div style="font-size:20px;">
-      <ul style="list-style:initial">
-      <li>平时的兴趣爱好是宅在宿舍玩游戏和看动漫，运动上我喜欢乒乓球，乒乓球真的很有意思
-      ，记得高考前我就是靠配朋友打乒乓球来调整情绪和心态的，我很喜欢这种一对一的对抗博弈，
-      因此游戏上我喜欢玩的也是卡牌类游戏（炉石、万智牌等）。斗地主、象棋也多少玩一玩</li>
-      <div style="display:flex;justify-content:space-around">
-      </div>
-
-    <li>另一类我喜欢的游戏是画面、动画、
-      风景、建模质量非常优秀的游戏，我对游戏内的场景画面的表现非常的感兴趣，因此希望将来可以从事相关方面的工作。</li>
-      <div style="display:flex;justify-content:space-around; position:relative">
-        <img src="/(CYM4978ZAZY440VNG6X5WK.png" style="display:inline;width:900px;height:500px;">
-      </div>
-      <div style="display:flex;flex-direction: column;align-items: center;">
-      <img src="/QW~$V@Z0ON{5GYA@3CCVTWB.png" style="display:inline;width:900px;height:500px;">
-      <span style="color:#ccc">今年大火的法环，游戏画面景色非常合我胃口</span>
-    </div>
-  
-  
-    <div style="font-size:20px;"><ul style="list-style:initial"><li>我也喜欢眺望远处,喜欢欣赏自然景色,再或者说我喜欢摄影,无论是游戏内还是现实里我都喜欢漂亮的景色,特别是天空,我喜欢看云和月亮,这也算是我为数不多的爱好,但是我却没有相机,我总是在想要是我有一个相机就好了,这样我就可以把这些美好但是短暂的景观以最好的画质存贮下来,可惜我想要的好的相机太贵了,我只能用我的手机自带的垃圾摄像头拍下了一些;只能说如果以后有了闲钱,我铁定要给自己买一个摄像机
-    </li></ul></div>
-    <div style="display:flex;justify-content:space-around; position:relative">
       
-      <div style="display:flex;flex-direction: column;align-items: center;">
-        <img src="/IMG_20210410_170246.jpg" style="display:inline;width:500px;height:500px;">
-        <span style="color:#ccc">记忆里的铜盘</span>
-      </div>
-      <div style="display:flex;flex-direction: column;align-items: center;">
-        <img src="/IMG_20220815_190738.jpg" style="display:inline;width:500px;height:500px;">
-        <span style="color:#ccc">家乡的城市</span>
-      </div>
+        
+
       
     </div>
-    
-    
-    <div style="font-size:30px;" >
-      <span style="font-weight: 800;">个人技能</span>
-    </div>
-    <div style="font-size:20px;">
-    <ul style="list-style:initial">
-      <li>熟识C/C++的程序代码编写</li>
-      <li>初步了解了GitHub以及git的运用方式</li>
-      <li>java入门</li>
-      <li>擅长团队合作(会干活)</li>
 
-    </ul></div>
-  
-  
-    
+    <div>
+      
+        
+
+      
+    </div>
+
+
+    <footer class="post-footer">
+      
+        <div class="post-tags">
+          
+            <a href="/tags/Handlebars/" rel="tag"># Handlebars</a>
+          
+        </div>
+      
+
+      
+        
+      
+
+      
+        <div class="post-nav">
+          <div class="post-nav-next post-nav-item">
+            
+              <a href="/2017/03/10/break-word-word-wrap-white-space/" rel="next" title="break-word、word-wrap、white-space">
+                <i class="fa fa-chevron-left"></i> break-word、word-wrap、white-space
+              </a>
+            
+          </div>
+
+          <span class="post-nav-divider"></span>
+
+          <div class="post-nav-prev post-nav-item">
+            
+              <a href="/2017/03/23/Markdown-Learning/" rel="prev" title="Markdown-Learning">
+                Markdown-Learning <i class="fa fa-chevron-right"></i>
+              </a>
+            
+          </div>
+        </div>
+      
+
+      
+      
+    </footer>
+  </article>
+
+
+
+    <div class="post-spread">
+      
+    </div>
   </div>
-  
-
-  
-
-    
-  </section>
-
-  
-  <!-- <nav class="pagination">
-    <span class="page-number current">1</span><a class="page-number" href="/page/2/">2</a><span class="space">&hellip;</span><a class="page-number" href="/page/7/">7</a><a class="extend next" rel="next" href="/page/2/"><i class="fa fa-angle-right"></i></a>
-  </nav> -->
-
 
           
           </div>
@@ -508,6 +504,10 @@ https://github.
 
 
           
+  <div class="comments" id="comments">
+    
+  </div>
+
 
         </div>
         
@@ -527,17 +527,56 @@ https://github.
       
 
       
+        <ul class="sidebar-nav motion-element">
+          <li class="sidebar-nav-toc sidebar-nav-active" data-target="post-toc-wrap" >
+            文章目录
+          </li>
+          <li class="sidebar-nav-overview" data-target="site-overview">
+            站点概览
+          </li>
+        </ul>
+      
 
-      <section class="site-overview sidebar-panel sidebar-panel-active">
+      <section class="site-overview sidebar-panel">
         <div class="site-author motion-element" itemprop="author" itemscope itemtype="http://schema.org/Person">
           <img class="site-author-image" itemprop="image"
-               src="/05679B2F9554D981E5476847E8541D73.jpg"
-               alt="吴晨捷" />
-          <p class="site-author-name" itemprop="name">吴晨捷</p>
+               src="/Avatar.png"
+               alt="BryanAdamss" />
+          <p class="site-author-name" itemprop="name">BryanAdamss</p>
            
               <p class="site-description motion-element" itemprop="description"></p>
           
         </div>
+        <nav class="site-state motion-element">
+        
+          
+            <div class="site-state-item site-state-posts">
+              <a href="/archives">
+                <span class="site-state-item-count">64</span>
+                <span class="site-state-item-name">日志</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-categories">
+              <a href="/categories">
+                <span class="site-state-item-count">2</span>
+                <span class="site-state-item-name">分类</span>
+              </a>
+            </div>
+          
+
+          
+            <div class="site-state-item site-state-tags">
+              <a href="/tags">
+                <span class="site-state-item-count">91</span>
+                <span class="site-state-item-name">标签</span>
+              </a>
+            </div>
+          
+
+        </nav>
 
         
 
@@ -545,7 +584,7 @@ https://github.
           
             
               <span class="links-of-author-item">
-                <a href="https://github.com/2368416713" target="_blank" title="GitHub">
+                <a href="https://github.com/BryanAdamss" target="_blank" title="GitHub">
                   
                     <i class="fa fa-fw fa-github"></i>
                   
@@ -568,6 +607,22 @@ https://github.
       </section>
 
       
+      <!--noindex-->
+        <section class="post-toc-wrap motion-element sidebar-panel sidebar-panel-active">
+          <div class="post-toc">
+
+            
+              
+            
+
+            
+              <div class="post-toc-content"><ol class="nav"><li class="nav-item nav-level-2"><a class="nav-link" href="#表达式"><span class="nav-number">1.</span> <span class="nav-text">表达式</span></a></li><li class="nav-item nav-level-2"><a class="nav-link" href="#Helper"><span class="nav-number">2.</span> <span class="nav-text">Helper</span></a><ol class="nav-child"><li class="nav-item nav-level-3"><a class="nav-link" href="#默认Helper"><span class="nav-number">2.1.</span> <span class="nav-text">默认Helper</span></a></li><li class="nav-item nav-level-3"><a class="nav-link" href="#自定义Helper"><span class="nav-number">2.2.</span> <span class="nav-text">自定义Helper</span></a><ol class="nav-child"><li class="nav-item nav-level-4"><a class="nav-link" href="#行级Helper"><span class="nav-number">2.2.1.</span> <span class="nav-text">行级Helper</span></a></li><li class="nav-item nav-level-4"><a class="nav-link" href="#块级Helper"><span class="nav-number">2.2.2.</span> <span class="nav-text">块级Helper</span></a></li></ol></li></ol></li></ol></div>
+            
+
+          </div>
+        </section>
+      <!--/noindex-->
+      
 
       
 
@@ -583,14 +638,25 @@ https://github.
       <div class="footer-inner">
         <div class="copyright" >
   
-  &copy;  2022 - 
-  <span itemprop="copyrightYear">2022</span>
+  &copy;  2017 - 
+  <span itemprop="copyrightYear">2020</span>
   <span class="with-love">
     <i class="fa fa-heart"></i>
   </span>
-  <span class="author" itemprop="copyrightHolder">吴晨捷的个人博客</span>
+  <span class="author" itemprop="copyrightHolder">BryanAdamss</span>
 </div>
 
+
+<div class="powered-by">
+  由 <a class="theme-link" href="https://hexo.io">Hexo</a> 强力驱动
+</div>
+
+<div class="theme-info">
+  主题 -
+  <a class="theme-link" href="https://github.com/iissnan/hexo-theme-next">
+    NexT.Mist
+  </a>
+</div>
 
 
         
@@ -661,6 +727,10 @@ https://github.
   
 
   
+  <script type="text/javascript" src="/js/src/scrollspy.js?v=5.1.0"></script>
+<script type="text/javascript" src="/js/src/post-details.js?v=5.1.0"></script>
+
+
 
   
 
